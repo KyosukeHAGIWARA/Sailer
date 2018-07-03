@@ -11,6 +11,7 @@ TEMPLATE_PATH.append("../tmpl")
 @route('/')
 @route('/first_input')
 def prepare():
+    print(listdir("./"))
 
     return template(
         'first_input_page.html',
