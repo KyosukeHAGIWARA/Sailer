@@ -14,7 +14,7 @@ Chrome ExtensionのGetTabInfoを使うとグッと幸せ度が上がります。
 urlリストをパコッとつくってくれるやつです
 
 1. Chromeをひらきます
-1. [GetTabInfo](https://chrome.google.com/webstore/detail/gettabinfo/iadhcoaabobddcebhmheikmbcjcigjhc "GetTabInfo"){:target="_blank"}をExtensionに追加します
+1. [GetTabInfo](https://chrome.google.com/webstore/detail/gettabinfo/iadhcoaabobddcebhmheikmbcjcigjhc "GetTabInfo")をExtensionに追加します
 1. 新たなWindowを開き、商品ページを開きまくります。(タブの並びが掲載順になります)(商品ページ以外は開かないでください)
 1. 右上のGetTabInfoのボタンからパネルをぴょこっと出し、上のTemplate欄に``` %%URL%%```と入力します。すると下のCode欄にURLが並ぶのでコピります
 
