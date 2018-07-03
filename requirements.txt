@@ -4,7 +4,7 @@ beautifulsoup4
 bottle
 certifi
 chardet
-inda
+idna
 lxml
 pip
 requests
