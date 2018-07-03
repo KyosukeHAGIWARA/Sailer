@@ -95,6 +95,8 @@ def scrape_inst_data(url):
     ]
 
 
+print(environ.get('APP_LOCATION') )
+
 if environ.get('APP_LOCATION') == 'heroku':
     run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
 else:
