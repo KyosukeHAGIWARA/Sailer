@@ -19,7 +19,7 @@ urlリストをパコッとつくってくれるやつです
 1. 右上のGetTabInfoのボタンからパネルをぴょこっと出し、上のTemplate欄に``` %%URL%%```と入力します。すると下のCode欄にURLが並ぶのでコピります
 
 ### 2 Sailer
-1. [Sailer](https://www.google.com "Sailer")をひらきます
+1. [Sailer](https://rm-sailer.herokuapp.com/ "Sailer")をひらきます
 1. 必要事項を埋めます
     + Usage-1で取ってきたURLのリストを欄にペーストします
     + メールの情報日時(最下部の注釈の部分)を設定します(デフォルトで今日の日付が入ります)
