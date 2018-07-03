@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 from bottle import route, run, request, static_file
 from bottle import TEMPLATE_PATH, jinja2_template as template
 from datetime import date
-from os import listdir
+from os import listdir, environ
 
 TEMPLATE_PATH.append("../tmpl")
 
@@ -95,4 +95,7 @@ def scrape_inst_data(url):
     ]
 
 
-run(host='localhost', port=1046, debug=True, reloader=True)
+if environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8080, debug=True)
