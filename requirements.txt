@@ -1,0 +1,12 @@
+Jinja2
+MarkupSafe
+beautifulsoup4
+bottle
+certifi
+chardet
+inda
+lxml
+pip
+requests
+setuptools
+urllib3
