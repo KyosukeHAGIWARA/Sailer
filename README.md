@@ -10,7 +10,7 @@ Chrome ExtensionのGetTabInfoを使うとグッと幸せ度が上がります。
 
 ## Usage
 
-### 1 GetTabInfo 
+### 1 GetTabInfo
 urlリストをパコッとつくってくれるやつです
 
 1. Chromeをひらきます
@@ -27,11 +27,15 @@ urlリストをパコッとつくってくれるやつです
     + メールの情報日時(最下部の注釈の部分)を設定します(デフォルトで今日の日付が入ります)
     + サムネ画像が入るフォルダを設定します(デフォルトで今日の日付が入ります)
     + 使うテンプレートをプルダウンから選びます
-    1. 必要事項を埋めます
+1. 必要事項を埋めます
+
     ![Sailer_logo](static/img/first_input_usage.gif "first_input_usage")
+
 1. 送信ボタンをぽちります
 1. 各商品のSubjectになる部分を適当に修正したら生成ボタンをぽちります
+
     ![Sailer_logo](static/img/input_fix_usage.gif "input_fix_usage")
+
 1. 幸せ(happy)になります
 
 ## Update Plans
@@ -40,10 +44,10 @@ urlリストをパコッとつくってくれるやつです
     + 既存テンプレをダウンロードできるようにします
     + 新規テンプレをアップロードできるようにします
     + 選択されているテンプレをプレビューできるようにします
-    
+
 + readme
-    + usage画像を入れたい
-    
+    + ~usage画像を入れたい~ いれた。
+
 ## Licence
 MIT
 
