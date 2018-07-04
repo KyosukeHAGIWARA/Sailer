@@ -5,7 +5,7 @@ from bottle import TEMPLATE_PATH, jinja2_template as template
 from datetime import date
 from os import listdir, environ
 
-TEMPLATE_PATH.append("./tmpl")
+TEMPLATE_PATH.append("../tmpl")
 
 
 @route('/')
@@ -17,7 +17,7 @@ def prepare():
         'first_input_page.html',
         today=date.today().strftime("%Y/%m/%d"),
         pic_folder_path="https://www.digimart.net/ad/{0}/".format(date.today().strftime("%Y%m%d")),
-        tmpl_list=[f for f in listdir("./tmpl/gen_tmpl")]
+        tmpl_list=[f for f in listdir("../tmpl/gen_tmpl")]
     )
 
 
@@ -25,7 +25,7 @@ def prepare():
 def server_static(file_path):
     # print("aaa")
     # print(file_path)
-    return static_file(file_path, root='./static/')
+    return static_file(file_path, root='../static/')
 
 
 @route('/input_fix', method="post")
@@ -103,4 +103,4 @@ def scrape_inst_data(url):
 # else:
 #     run(host='localhost', port=8080, debug=True)
 
-run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
+run(host='localhost', port=8080, debug=True)
