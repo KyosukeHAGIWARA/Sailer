@@ -47,6 +47,9 @@ urlリストをパコッとつくってくれるやつです
 
 + readme
     + ~usage画像を入れたい~ いれた。
+    
++ BugFix
+    + 割引商品じゃないとかそもそもURLマッチしないときとかにランタイムエラーにならないようにvalidationしたい
 
 ## Licence
 MIT
