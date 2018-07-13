@@ -20,6 +20,12 @@
             margin-bottom:50px;
         }
     </style>
+    <script language="javascript"><
+        function send() {
+            document.nform.submit();
+            document.nform2.submit();
+        }
+    </script>
 
 </head>
 
@@ -38,12 +44,6 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-1 mx-auto" id="progress_wheel">
-            <img src="./static/img/ajax-loader.gif" width="100%">
-        </div>
-    </div>
-
     <script>
         document.getElementById("progress_wheel").style.display ="none";
         function progress()
@@ -53,11 +53,13 @@
 
     </script>
 
+<!--<iframe src="../gen_tmpl/sale_weekly.html" width=600 height=200></iframe>-->
 
 
     <div class="row">
         <div class="col-md-10 mx-auto">
-            <form class="form-horizontal"  name="inu" action="/input_fix" method="post">
+            <form id="full_form" class="form-horizontal"  name="full_form" action="/input_fix" method="post">
+
                 <div class="form-group">
                     <label for="name"><h5>日付:</h5></label>
                     <input type="text" id="name" class="form-control" name="date" value="{{today}}" >
@@ -70,6 +72,8 @@
                     <label for="url_list"><h5>URLリスト 改行区切り:</h5></label>
                     <textarea id="url_list" class="form-control" name="url_list"  placeholder="https://www.digimart.net/cat01/shop5113/DS04640207/" rows="12"></textarea>
                 </div>
+
+
                 <div class="form-group">
                     <label for="selection"><h5>テンプレート:</h5></label>
                     <select id="selection" class="form-control" name="tmpl_select">
@@ -77,13 +81,33 @@
                         <option value="{{tmpl}}">{{tmpl}}</option>
                         {% endfor %}
                     </select>
+                    <!--<input form="tmpl_dl_form" type="submit" value="Download" class="btn btn-lg btn-info">-->
                 </div>
-                <input type="submit" value="Sail" class="btn btn-lg btn-info btn-block" onclick="progress()">
+
+                <div class="form-group">
+                    <label  for="upload">新規アップロード</label>
+                    <input form="tmpl_form" class="" type="file" name="upload">
+                    <input form="tmpl_form" type="submit" value="Upload" class="btn btn-info">
+                </div>
+
+
             </form>
         </div>
     </div>
 
 
+
+    <form id="tmpl_form" action="/upload" method="post" enctype="multipart/form-data">
+    </form>
+    <form id="tmpl_dl_form" action="/download" method="post" enctype="multipart/form-data">
+    </form>
+
+
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <input form="full_form" type="submit" value="Sail" class="btn btn-lg btn-info btn-block" onclick="progress()">
+        </div>
+    </div>
 
 </div>
 

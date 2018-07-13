@@ -4,6 +4,7 @@ from bottle import route, run, request, static_file
 from bottle import TEMPLATE_PATH, jinja2_template as template
 from datetime import date
 from os import listdir, environ
+import os
 
 TEMPLATE_PATH.append("../tmpl")
 
@@ -21,11 +22,41 @@ def prepare():
     )
 
 
+# @route('/upload', method='POST')
+# def do_upload():
+#     upload = request.files.get('upload')
+#
+#     # name, ext = os.path.splitext(upload.filename)
+#
+#     upload.save("../tmpl/gen_tmpl", overwrite=True)
+#
+#     return template(
+#         'first_input_page.html',
+#         today=date.today().strftime("%Y/%m/%d"),
+#         pic_folder_path="https://www.digimart.net/ad/{0}/".format(date.today().strftime("%Y%m%d")),
+#         tmpl_list=[f for f in listdir("../tmpl/gen_tmpl")]
+#     )
+#
+#
+# @route('/download', method="post")
+# def download():
+#     # print("aaa")
+#     # print(file_path)
+#     tmpl = request.forms.getunicode("tmpl_select")
+#     print(tmpl)
+#     return static_file(tmpl, root='../static/')
+
 @route('/static/<file_path:path>')
 def server_static(file_path):
     # print("aaa")
     # print(file_path)
-    return static_file(file_path, root='../static/')
+    return static_file(file_path, root='../static')
+
+@route('/tmpl')
+def server_statics():
+    # print("aaa")
+    # print(file_path)
+    return static_file(listdir("../tmpl/gen_tmpl")[0], root='../tmpl/gen_tmpl')
 
 
 @route('/input_fix', method="post")
